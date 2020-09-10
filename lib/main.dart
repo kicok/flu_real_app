@@ -150,6 +150,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    print('build() MyHomepageState');
     final mediaQuery = MediaQuery.of(context);
     final isLandscape = mediaQuery.orientation == Orientation.landscape;
     final PreferredSizeWidget appBar = Platform.isIOS
@@ -187,7 +188,7 @@ class _MyHomePageState extends State<MyHomePage> {
       child: TransactionList(_userTransactions, _deleteTransaction),
     );
 
-    print('height :: ${appBar.preferredSize.height}');
+    //print('height :: ${appBar.preferredSize.height}');
 
     final pageBody = SafeArea(
       child: SingleChildScrollView(
